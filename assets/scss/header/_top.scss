@@ -1,0 +1,209 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+
+    @include md {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__logo {
+    display: block;
+
+    @include md {
+    }
+  }
+
+  &__logo-img {
+    @include md {
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 5px;
+
+    @include md {
+    }
+    @include sm {
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $gap;
+
+    @include md {
+      justify-content: space-between;
+    }
+  }
+
+  &__language {
+  }
+
+  &__address {
+    }
+
+  &__phones {
+  }
+
+  &__phone-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+
+    @include md {
+      color: $color-text;
+    }
+  }
+
+  &__social {
+  }
+
+  &__navbar {
+    padding-top: 10px;
+  }
+}
+
+.language {
+
+  &__link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 5px 5px 5px 6px;
+    border-radius: 8px;
+    transition: 0.5s;
+
+    @include md {
+      color: $color-text;
+    }
+  }
+  &__active {
+    background: $color-accent;
+    @include md {
+      color: $color-white;
+    }
+  }
+}
+
+.address {
+  @include md {
+    display: none;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+  }
+}
+
+.social {
+
+  @include md {
+    display: none;
+  }
+
+  &__link {
+    display: block;
+  }
+}
+
+.navbar {
+
+  &__list {
+    display: flex;
+    gap: $gap-md;
+    @include unlist;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    text-shadow: 0px 4px 4px #00000040;
+    padding: 5px 0;
+  }
+}
+
+.navbar__btn {
+  position: relative;
+
+  width: 40px;
+  height: 30px;
+
+  cursor: pointer;
+
+  @include md-min {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 5px;
+
+    transition: 0.25s ease-in-out;
+    transform: rotate(0deg);
+
+    opacity: 1;
+    border-radius: 5px;
+    background-color: $color-white;
+
+    &:nth-of-type(1) {
+      top: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: 12px;
+    }
+
+    &:nth-of-type(3) {
+      top: 24px;
+    }
+  }
+
+  &.active span {
+    &:nth-of-type(1) {
+      top: 12px;
+
+      transform: rotate(135deg);
+    }
+
+    &:nth-of-type(2) {
+      left: -40px;
+
+      opacity: 0;
+    }
+
+    &:nth-of-type(3) {
+      top: 12px;
+
+      transform: rotate(-135deg);
+    }
+  }
+}
