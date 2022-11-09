@@ -1,0 +1,106 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.experience {
+  background-color: #323264;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 75px;
+
+  @include lg {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    text-align: right;
+    color: $color-text;
+    font-size: 42px;
+    line-height: 50px;
+    max-width: 392px;
+    cursor: pointer;
+
+    @include lg {
+      display: block;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__title:hover {
+    background: $gradient-redtext-reversed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__active {
+    background: $gradient-redtext-reversed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__invisible {
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__descriptions {
+    color: $color-white;
+
+    @include lg-min {
+      max-width: 586px;
+    }
+  }
+
+  &__name {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: normal;
+
+    @include lg {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__text {
+    font-size: 21px;
+    line-height: 30px;
+    padding-top: 20px;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+	&__indicators {
+    display: flex;
+    gap: 14px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include lg-min {
+      display: none;
+    }
+	}
+
+}

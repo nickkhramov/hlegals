@@ -9,3 +9,14 @@
 .visually-hidden {
   @include visually-hidden
 }
+
+.indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: $color-active-regular;
+  opacity: 0.2;
+}
+.indicator--active {
+  opacity: 1;
+}
