@@ -1,0 +1,90 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.services {
+background: $gradient-supersoft;
+padding-top: 75px;
+
+  &__heading {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-white;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 42px;
+    line-height: 50px;
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    padding-bottom: 67px;
+
+    @include md {
+      font-size: 32px;
+      line-height: 38px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 38px;
+
+    @include xl-min {
+      grid-template-columns: repeat(3,1fr);
+    }
+    @include xl-md {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__image {
+  }
+
+  &__icon {
+    @include md {
+      max-width: 64px;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: $color-active-regular;
+    padding-top: 14px;
+
+    @include md {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-white;
+    padding-top: 16px;
+
+    @include md {
+      font-size: 16px;
+      line-height: 22px;
+
+    }
+  }
+}
