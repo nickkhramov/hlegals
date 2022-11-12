@@ -3,44 +3,46 @@
 
 .header {
   &__top {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas: "log act" "log nav";
+    grid-template-columns: auto 1fr;
     padding-top: 50px;
 
     @include md {
+      grid-template-areas: "act act" "log nav";
+      padding-top: 20px;
     }
   }
 
   &__logo {
-    display: block;
+    grid-area: log;
 
     @include md {
     }
   }
 
   &__logo-img {
-    @include md {
+    @include sm {
+      max-width: 100px;
     }
   }
 
-  &__menu {
+  &__navbar {
+    grid-area: nav;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 5px;
-
-    @include md {
-    }
-    @include sm {
-    }
+    justify-content: flex-end;
+    align-items: center;
   }
 
   &__actions {
     display: flex;
     gap: $gap;
+    grid-area: act;
+    justify-content: flex-end;
 
     @include md {
       justify-content: space-between;
+      padding-bottom: 23px;
     }
   }
 
@@ -65,10 +67,6 @@
   }
 
   &__social {
-  }
-
-  &__navbar {
-    padding-top: 10px;
   }
 }
 
