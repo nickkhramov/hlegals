@@ -1,0 +1,110 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.footer {
+
+  &__info {
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    @include md {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__address {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-main;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active-regular;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__facebook {
+  }
+
+  &__logo {
+  }
+
+  &__phone {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-main-alt;
+
+    @include md-min {
+      padding-left: 20px;
+    }
+    @include md {
+      padding-top: 15px;
+    }
+  }
+
+  &__mail {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-active-regular;
+
+    @include md-min {
+      padding-left: 30px;
+    }
+    @include md {
+      padding-top: 20px;
+    }
+  }
+
+  &__copyright {
+    @include md {
+      padding-top: 20px;
+    }
+  }
+
+  &__copyright-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-text;
+    text-align: right;
+
+    @include md {
+      text-align: center;
+    }
+  }
+}
+.container--footer {
+  border-top: 4px solid $color-separator;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  @include md {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 115px;
+  }
+}

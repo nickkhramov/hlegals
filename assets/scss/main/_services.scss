@@ -4,6 +4,7 @@
 .services {
 background: $gradient-supersoft;
 padding-top: 75px;
+padding-bottom: 20px;
 
   &__heading {
     font-size: 14px;
@@ -45,15 +46,20 @@ padding-top: 75px;
   }
 
   &__item {
-    display: flex;
+    display: grid;
     flex-direction: column;
-  }
 
-  &__wrap {
-    display: flex;
+    @include md {
+      grid-template-areas: "img nam" "des des";
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
   }
 
   &__image {
+    @include md {
+      grid-area: img;
+    }
   }
 
   &__icon {
@@ -72,6 +78,9 @@ padding-top: 75px;
     @include md {
       font-size: 18px;
       line-height: 21px;
+      grid-area: nam;
+      padding-top: 0;
+      padding-left: 10px;
     }
   }
 
@@ -84,6 +93,7 @@ padding-top: 75px;
     @include md {
       font-size: 16px;
       line-height: 22px;
+      grid-area: des;
 
     }
   }
