@@ -1,0 +1,109 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.cases {
+
+  &__item1,
+  &__item2,
+  &__item3,
+  &__item4,
+  &__item5,
+  &__item6,
+  &__item7 {
+    background-color: $color-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: $gap;
+    padding: 20px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-accent;
+  }
+
+  &__description {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+    color: $color-main-soft;
+  }
+
+  &__company {
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-text;
+  }
+
+  &__item1 {
+    grid-area: it1;
+
+    @include lg-min {
+      border-radius: 12px 0 0 0;
+    }
+    @include lg {
+      border-radius: 12px 12px 0 0;
+    }
+  }
+
+  &__item2 {
+    grid-area: it2;
+  }
+
+  &__item3 {
+    grid-area: it3;
+  }
+
+  &__item4 {
+    grid-area: it4;
+
+    @include lg-min {
+      border-radius: 0 12px 0 0;
+    }
+  }
+
+  &__item5 {
+    grid-area: it5;
+
+    @include lg-min {
+      border-radius: 0 0 0 12px;
+    }
+  }
+
+  &__item6 {
+    grid-area: it6;
+  }
+
+  &__item7 {
+    grid-area: it7;
+
+    @include lg-min {
+      border-radius: 0 0 12px 0;
+    }
+    @include lg {
+      border-radius: 0 0 12px 12px;
+    }
+  }
+}
+.container--cases {
+  display: grid;
+  gap: 2px;
+
+  @include lg-min {
+    grid-template-areas: "it1 it1 it3 it3 it4" "it2 it2 it3 it3 it4" "it5 it6 it6 it7 it7";
+    grid-template-columns: 1.5fr 0.5fr 1.5fr 0.4fr 2fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+  }
+  @include lg {
+    grid-template-areas: "it1" "it2" "it3" "it4" "it5" "it6" "it7" ;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+}

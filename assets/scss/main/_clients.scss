@@ -3,6 +3,16 @@
 
 .clients {
 
+  &__title {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-main;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
   &__wrap {
     display: grid;
     grid-template-areas: "hil wan tap loo" "ora adt cli eco" "inf cit art uca";
@@ -94,4 +104,8 @@
     background-color: $color-black;
     grid-area: uca;
   }
+}
+.container--clients {
+  width: min(100%);
+  padding-top: 35px;
 }

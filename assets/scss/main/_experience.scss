@@ -21,7 +21,7 @@
   &__titles {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: $gap;
   }
 
   &__title {
