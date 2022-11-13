@@ -6,27 +6,27 @@
   &__wrap {
     display: grid;
     grid-template-areas: "hil wan tap loo" "ora adt cli eco" "inf cit art uca";
+
+    @include lg {
+      grid-template-areas: "hil wan tap" "loo eco adt" "cli ora cit" "inf art uca";
+    }
+    @include sm {
+      grid-template-areas: "hil wan" "tap loo" "eco cli" "ora inf" "uca art" "cit adt";
+    }
   }
 
   &__item {
-    min-width: 360px;
     min-height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @include md {
-      max-width: 188px;
       min-height: 90px;
     }
   }
 
   &__link {
-    padding: 10px 70px;
-
-    @include md {
-      padding: 0px 12px;
-    }
   }
 
   &__logo {
