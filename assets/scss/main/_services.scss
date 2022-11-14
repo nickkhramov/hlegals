@@ -4,7 +4,7 @@
 .services {
 background: $gradient-supersoft;
 padding-top: 75px;
-padding-bottom: 20px;
+border-radius: 0 0 12px 12px;
 
   &__heading {
     font-size: 14px;
@@ -35,13 +35,17 @@ padding-bottom: 20px;
 
   &__grid {
     display: grid;
-    gap: 38px;
+    gap: $gap-xl;
+    padding-bottom: 80px;
 
     @include xl-min {
       grid-template-columns: repeat(3,1fr);
     }
     @include xl-md {
       grid-template-columns: repeat(2,1fr);
+    }
+    @include md {
+      padding-bottom: 20px;
     }
   }
 

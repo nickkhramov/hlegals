@@ -1,3 +1,112 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
+.team {
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  &__image {
+    max-height: 500px;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__photo {
+    border-radius: 12px 0 0 12px;
+  }
+
+  &__content {
+    padding-top: 40px;
+    padding-right: 20px;
+
+    @include lg {
+      padding: 25px 20px 20px 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active-regular;
+  }
+
+  &__quote {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    max-width: 830px;
+    padding-top: 5px;
+
+    @include md {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__wrap {
+    @include lg {
+      display: flex;
+      align-items: center;
+      gap: $gap-sm;
+      padding-top: 10px;
+    }
+  }
+
+  &__image-mobile {
+    @include lg-min {
+      display: none;
+    }
+  }
+
+  &__photo-mobile {
+    border-radius: 120px;
+  }
+
+  &__naming {
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-text;
+
+    @include lg-min {
+      padding-top: 20px;
+    }
+  }
+
+  &__job {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-text;
+    padding-top: 5px;
+  }
+
+  &__indicators {
+    display: flex;
+    gap: $gap-md;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  &__indicator {
+  }
+}
+.container--team {
+  background-color: $color-bg;
+  border-radius: 12px;
+  display: flex;
+  gap: $gap-xl;
+}

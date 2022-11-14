@@ -21,7 +21,6 @@
   &__title {
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $color-accent;
@@ -44,9 +43,11 @@
 
   &__item1 {
     grid-area: it1;
+    text-align: left;
 
     @include lg-min {
       border-radius: 12px 0 0 0;
+      justify-content: center;
     }
     @include lg {
       border-radius: 12px 12px 0 0;
@@ -98,7 +99,7 @@
 
   @include lg-min {
     grid-template-areas: "it1 it1 it3 it3 it4" "it2 it2 it3 it3 it4" "it5 it6 it6 it7 it7";
-    grid-template-columns: 1.5fr 0.5fr 1.5fr 0.4fr 2fr;
+    grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr 2fr;
     grid-template-rows: 0.3fr 1fr 1fr;
   }
   @include lg {
