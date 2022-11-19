@@ -1,5 +1,5 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .experience {
   background-color: #323264;
@@ -30,7 +30,6 @@
     font-size: 42px;
     line-height: 50px;
     max-width: 392px;
-    cursor: pointer;
 
     @include lg {
       display: block;
@@ -69,10 +68,14 @@
     }
   }
 
+  &__note {
+    display: none;
+  }
+
   &__name {
     font-size: 32px;
     line-height: 38px;
-    font-weight: normal;
+    font-weight: 500;
 
     @include lg {
       font-size: 22px;
@@ -102,5 +105,8 @@
       display: none;
     }
 	}
-
 }
+.note--active {
+  display: block;
+}
+

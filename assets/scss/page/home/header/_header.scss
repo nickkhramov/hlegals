@@ -1,5 +1,5 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .header {
   background: $gradient-soft;
@@ -7,7 +7,10 @@
   &__button {
     position: absolute;
     left: 50%;
-    bottom: 80px;
     cursor: pointer;
+
+    @include md-min {
+      bottom: -120px;
+    }
   }
 }

@@ -1,10 +1,35 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .services {
 background: $gradient-supersoft;
 padding-top: 75px;
-border-radius: 0 0 12px 12px;
+position: relative;
+
+@include md {
+  padding-top: 40px;
+}
+
+&:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 40px;
+  left: 40px;
+  height: 20px;
+  border-radius: 0 0 12px 12px;
+  background-color: #cacadb;
+  }
+
+&:after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  left: 20px;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background-color: #e7e7f2;
+  }
 
   &__heading {
     font-size: 14px;
@@ -13,7 +38,6 @@ border-radius: 0 0 12px 12px;
     text-transform: uppercase;
     color: $color-white;
     opacity: 0.5;
-    cursor: pointer;
   }
 
   &__title {

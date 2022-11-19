@@ -1,5 +1,5 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .publications {
   background-color: $color-bg;
@@ -22,17 +22,21 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    padding-top: 2px;
   }
 
   &__content {
     column-count: 3;
     column-gap: 40px;
+    padding-top: 40px;
   }
 
   &__item {
     background-color: $color-white;
     border-radius: 8px;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__name {
@@ -71,5 +75,16 @@
   }
 
   &__button {
+    color: $color-white;
+    background: $color-active-regular;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    min-width: 250px;
+    min-height: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
   }
 }

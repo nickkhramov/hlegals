@@ -1,9 +1,13 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .team {
   padding-top: 60px;
   padding-bottom: 40px;
+
+  @include lg {
+  padding-top: 40px;
+  }
 
   &__image {
     max-height: 500px;
@@ -18,7 +22,7 @@
   }
 
   &__content {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-right: 20px;
 
     @include lg {
