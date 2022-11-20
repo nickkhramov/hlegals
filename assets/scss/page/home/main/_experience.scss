@@ -22,6 +22,19 @@
     display: flex;
     flex-direction: column;
     gap: $gap;
+    position: relative;
+
+    &:after {
+      @include lg-min {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        top: 0;
+        right: -40px;
+        background-color: $color-separator;
+      }
+    }
   }
 
   &__title {
@@ -30,21 +43,22 @@
     font-size: 42px;
     line-height: 50px;
     max-width: 392px;
+    cursor: pointer;
 
     @include lg {
-      display: block;
+      display: none;
       text-transform: uppercase;
       font-size: 14px;
       line-height: 17px;
       letter-spacing: 1px;
     }
-  }
 
-  &__title:hover {
-    background: $gradient-redtext-reversed;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    &:hover {
+      background: $gradient-redtext-reversed;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   }
 
   &__active {
@@ -52,6 +66,24 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
+
+    @include lg {
+      display: block;
+    }
+
+    &:after {
+      @include lg-min {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        top: 0;
+        right: -40px;
+        background-color: $color-accent;
+        z-index: 1;
+      }
+    }
   }
 
   &__invisible {

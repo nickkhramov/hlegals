@@ -116,6 +116,13 @@
   &__link {
     display: block;
   }
+
+  &__image {
+    transition: 0.5s linear;
+  }
+  &__image:hover {
+    fill: $color-accent;
+  }
 }
 
 .navbar {

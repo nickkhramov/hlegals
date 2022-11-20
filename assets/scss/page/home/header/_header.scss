@@ -3,6 +3,17 @@
 
 .header {
   background: $gradient-soft;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 70%;
+    background: linear-gradient(180deg, #32326400 16.67%, #323264 100%);
+  }
 
   &__button {
     position: absolute;
@@ -10,7 +21,6 @@
     cursor: pointer;
 
     @include md-min {
-      bottom: -120px;
     }
   }
 }

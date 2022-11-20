@@ -2,6 +2,7 @@
 @use "../../../mixins" as *;
 
 .footer {
+  background-color: $color-bg;
 
   &__info {
   }

@@ -37,6 +37,16 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $color-active-regular;
+
+    &:after {
+      position: relative;
+      top: 2px;
+      padding-right: 10px;
+      margin-left: 5px;
+      content: "";
+      background-image: url(../img/arrow-right-blue.svg);
+      background-repeat: no-repeat;
+    }
   }
 
   &__quote {
