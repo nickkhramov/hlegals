@@ -50,6 +50,10 @@ position: relative;
       content: "";
       background-image: url(../img/arrow-right-gray.svg);
       background-repeat: no-repeat;
+
+      @include md {
+        top: 48px;
+      }
     }
   }
 

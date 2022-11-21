@@ -5,6 +5,7 @@
   background-color: $color-bg;
 
   &__info {
+    font-style: normal;
   }
 
   &__top {
@@ -48,6 +49,12 @@
   }
 
   &__logo {
+    transition: 0.5s;
+
+    &:hover {
+      fill: $color-accent;
+      cursor: pointer
+    }
   }
 
   &__phone {
