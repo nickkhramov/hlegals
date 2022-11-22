@@ -7,7 +7,7 @@
   position: relative;
 
   @include md {
-    padding-top: 15px;
+    padding-top: $gap-md;
   }
 
   &:after {
@@ -33,7 +33,7 @@
     &:after {
       position: relative;
       top: 2px;
-      padding-right: 10px;
+      padding-right: $gap-sm;
       margin-left: 5px;
       content: "";
       background-image: url(../img/arrow-right-blue.svg);
@@ -49,7 +49,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     padding-top: 2px;
 
     @include md {
@@ -60,12 +59,12 @@
 
   &__content {
     column-count: auto;
-    column-gap: 40px;
+    column-gap: $gap-xl;
     column-width: 413px;
-    padding-top: 40px;
+    padding-top: $gap-xl;
 
     @include md {
-      padding-top: 20px;
+      padding-top: $gap;
       padding-bottom: 110px;
     }
   }
@@ -73,12 +72,12 @@
   &__item {
     background-color: $color-white;
     border-radius: 8px;
-    margin-bottom: 40px;
+    margin-bottom: $gap-xl;
     display: flex;
     flex-direction: column;
 
     @include md {
-      margin-bottom: 20px;
+      margin-bottom: $gap;
 
       &:nth-child(6) {
         display: none;
@@ -99,7 +98,7 @@
     font-size: 18px;
     line-height: 21px;
     color: $color-active-regular;
-    padding: 20px 20px 0 20px;
+    padding: $gap $gap 0 $gap;
   }
 
   &__date {
@@ -109,7 +108,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $color-text;
-    padding: 10px 20px 18px 20px;
+    padding: $gap-sm $gap 18px $gap;
   }
 
   &__description {
@@ -117,9 +116,9 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 18px 0 30px 0;
+    margin-left: $gap;
+    margin-right: $gap;
+    padding: 18px 0 $gap-lg 0;
 
     @include xl {
       display: none;
@@ -137,7 +136,7 @@
   &__button {
     color: $color-white;
     background: $color-active-regular;
-    box-shadow: 0px 0px 20px #24a3ff80;
+    box-shadow: 0px 0px $gap #24a3ff80;
     border-radius: 12px;
     cursor: pointer;
     border: none;
@@ -153,7 +152,7 @@
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
-    bottom: 40px;
+    bottom: $gap-xl;
 
     &:hover {
       background: $color-active-hover;

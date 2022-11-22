@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: flex-end;
     row-gap: $gap;
-    padding: 20px;
+    padding: $gap;
   }
 
   &__title {

@@ -31,7 +31,7 @@
         width: 4px;
         height: 100%;
         top: 0;
-        right: -40px;
+        right: -$gap-xl;
         background-color: $color-separator;
       }
     }
@@ -79,7 +79,7 @@
         width: 4px;
         height: 100%;
         top: 0;
-        right: -40px;
+        right: -$gap-xl;
         background-color: $color-accent;
         z-index: 1;
       }
@@ -117,8 +117,8 @@
 
   &__text {
     font-size: 21px;
-    line-height: 30px;
-    padding-top: 20px;
+    line-height: $gap-lg;
+    padding-top: $gap;
 
     @include lg {
       font-size: 18px;
@@ -129,7 +129,7 @@
 	&__indicators {
     display: flex;
     gap: $gap-md;
-    padding-top: 10px;
+    padding-top: $gap-sm;
     margin-left: auto;
     margin-right: auto;
 

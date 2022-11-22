@@ -2,11 +2,11 @@
 @use "../../../mixins" as *;
 
 .cases {
-  &--services {
+  &--alt {
     padding-top: 60px;
 
     @include md {
-      padding-top: 40px;
+      padding-top: $gap-xl;
     }
   }
 }
@@ -15,6 +15,7 @@
   &--alt {
     padding-top: 50px;
   }
+
   &__heading {
     &:after {
       top: 58px;

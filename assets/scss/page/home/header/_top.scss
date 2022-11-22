@@ -11,7 +11,7 @@
 
     @include md {
       grid-template-areas: "act act" "log nav";
-      padding-top: 20px;
+      padding-top: $gap;
     }
   }
 
@@ -155,8 +155,8 @@
   &__btn {
   position: relative;
 
-  width: 40px;
-  height: 30px;
+  width: $gap-xl;
+  height: $gap-lg;
 
   cursor: pointer;
 
@@ -217,7 +217,7 @@
     }
 
     &:nth-of-type(2) {
-      left: -40px;
+      left: -$gap-xl;
 
       opacity: 0;
     }

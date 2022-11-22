@@ -3,10 +3,10 @@
 
 .team {
   padding-top: 60px;
-  padding-bottom: 40px;
+  padding-bottom: $gap-xl;
 
   @include lg {
-  padding-top: 40px;
+  padding-top: $gap-xl;
   }
 
   &__image {
@@ -22,11 +22,11 @@
   }
 
   &__content {
-    padding-top: 30px;
-    padding-right: 20px;
+    padding-top: $gap-lg;
+    padding-right: $gap;
 
     @include lg {
-      padding: 25px 20px 20px 20px;
+      padding: 25px $gap $gap $gap;
     }
   }
 
@@ -41,7 +41,7 @@
     &:after {
       position: relative;
       top: 2px;
-      padding-right: 10px;
+      padding-right: $gap-sm;
       margin-left: 5px;
       content: "";
       background-image: url(../img/arrow-right-blue.svg);
@@ -57,7 +57,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     max-width: 830px;
     padding-top: 5px;
 
@@ -72,7 +71,7 @@
       display: flex;
       align-items: center;
       gap: $gap-sm;
-      padding-top: 10px;
+      padding-top: $gap-sm;
     }
   }
 
@@ -96,7 +95,7 @@
     color: $color-text;
 
     @include lg-min {
-      padding-top: 20px;
+      padding-top: $gap;
     }
   }
 
@@ -112,7 +111,7 @@
     display: flex;
     gap: $gap-md;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: $gap;
   }
 
   &__indicator {

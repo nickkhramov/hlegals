@@ -15,7 +15,7 @@
   &__top {
     @include lg {
       grid-template-areas: "act act" "log nav";
-      padding-top: 20px;
+      padding-top: $gap;
     }
   }
   &__logo-img {

@@ -1,6 +1,0 @@
-@use "../presets" as *;
-
-%container {
-  width: min(100% - 40px, $ul);
-  margin-inline: auto;
-}

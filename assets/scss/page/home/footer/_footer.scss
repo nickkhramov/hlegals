@@ -38,7 +38,7 @@
   &__bottom {
     display: flex;
     align-items: center;
-    padding-top: 20px;
+    padding-top: $gap;
 
     @include md {
       flex-direction: column;
@@ -64,10 +64,10 @@
     color: $color-main-alt;
 
     @include md-min {
-      padding-left: 20px;
+      padding-left: $gap;
     }
     @include md {
-      padding-top: 15px;
+      padding-top: $gap-md;
     }
   }
 
@@ -78,16 +78,16 @@
     color: $color-active-regular;
 
     @include md-min {
-      padding-left: 30px;
+      padding-left: $gap-lg;
     }
     @include md {
-      padding-top: 20px;
+      padding-top: $gap;
     }
   }
 
   &__copyright {
     @include md {
-      padding-top: 20px;
+      padding-top: $gap;
     }
   }
 
@@ -107,12 +107,12 @@
   border-top: 4px solid $color-separator;
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: $gap-lg;
+  padding-bottom: $gap-xl;
 
   @include md {
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: $gap;
     padding-bottom: 115px;
   }
 }

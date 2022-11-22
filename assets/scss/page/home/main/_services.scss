@@ -7,16 +7,16 @@ padding-top: 75px;
 position: relative;
 
 @include md {
-  padding-top: 40px;
+  padding-top: $gap-xl;
 }
 
 &:before {
   content: "";
   position: absolute;
   top: 100%;
-  right: 40px;
-  left: 40px;
-  height: 20px;
+  right: $gap-xl;
+  left: $gap-xl;
+  height: $gap;
   border-radius: 0 0 12px 12px;
   background-color: #e7e7f2;
   }
@@ -24,9 +24,9 @@ position: relative;
 &:after {
   content: "";
   position: absolute;
-  right: 20px;
-  left: 20px;
-  height: 10px;
+  right: $gap;
+  left: $gap;
+  height: $gap-sm;
   border-radius: 0 0 12px 12px;
   background-color: #cacadb;
   }
@@ -44,7 +44,7 @@ position: relative;
       position: absolute;
       top: 83px;
       bottom: 0;
-      padding-right: 10px;
+      padding-right: $gap-sm;
       margin-left: 5px;
       max-height: 13px;
       content: "";
@@ -64,13 +64,12 @@ position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     padding-bottom: 67px;
 
     @include md {
       font-size: 32px;
       line-height: 38px;
-      padding-bottom: 20px;
+      padding-bottom: $gap;
     }
   }
 
@@ -86,7 +85,7 @@ position: relative;
       grid-template-columns: repeat(2,1fr);
     }
     @include md {
-      padding-bottom: 20px;
+      padding-bottom: $gap;
     }
   }
 
@@ -125,7 +124,7 @@ position: relative;
       line-height: 21px;
       grid-area: nam;
       padding-top: 0;
-      padding-left: 10px;
+      padding-left: $gap-sm;
     }
   }
 
