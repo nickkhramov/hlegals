@@ -15,12 +15,11 @@
       background-image: url(../img/splash.svg);
       background-repeat: no-repeat;
       background-position: 50% 100%;
-      background-size: 85vh;
     }
   }
 
   &__symbol {
-    transform: translateY(20%);
+    transform: translateY(17%);
 
     @include md {
       transform: translateY(5%);
@@ -29,7 +28,7 @@
 
   &__title {
     position: absolute;
-    top: 42%;
+    top: 41%;
     left: 50%;
     width: 100%;
     max-width: 620px;

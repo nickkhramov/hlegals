@@ -26,7 +26,7 @@
     padding-right: $gap;
 
     @include lg {
-      padding: 25px $gap $gap $gap;
+      padding: $gap-md $gap $gap $gap;
     }
   }
 
@@ -109,6 +109,10 @@
     gap: $gap-md;
     justify-content: center;
     padding-top: $gap;
+
+    @include md {
+      padding-top: $gap-md;
+    }
   }
 }
 .container--team {
