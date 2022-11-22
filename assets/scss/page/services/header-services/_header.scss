@@ -1,15 +1,17 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.header--services {
-  &::after {
-    content: "";
-    background: none;
-    top: 100%;
-  }
-}
-
 .header {
+  &--alt {
+    background: none;
+    background-color: $color-main;
+
+    &::after {
+      content: "";
+      background: none;
+      top: 100%;
+    }
+  }
   &__top {
     @include lg {
       grid-template-areas: "act act" "log nav";

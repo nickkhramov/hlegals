@@ -1,0 +1,23 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.cases {
+  &--services {
+    padding-top: 60px;
+
+    @include md {
+      padding-top: 40px;
+    }
+  }
+}
+
+.services {
+  &--alt {
+    padding-top: 50px;
+  }
+  &__heading {
+    &:after {
+      top: 58px;
+    }
+  }
+}
