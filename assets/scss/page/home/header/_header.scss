@@ -5,21 +5,6 @@
   background: $gradient-soft;
   position: relative;
 
-  &::before {
-    @include md-min {
-      content: "";
-      background-image: url(../img/splash.svg);
-      background-repeat: no-repeat;
-      background-position: 50% 100%;
-      background-size: 85vh;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-  }
-
   &:after {
     position: absolute;
     content: "";
@@ -35,6 +20,7 @@
     position: absolute;
     left: 50%;
     cursor: pointer;
+    z-index: 2;
 
     @include md-min {
     }

@@ -1,0 +1,60 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.header--services {
+  &::after {
+    content: "";
+    background: none;
+    top: 100%;
+  }
+}
+
+.header {
+  &__top {
+    @include lg {
+      grid-template-areas: "act act" "log nav";
+      padding-top: 20px;
+    }
+  }
+  &__logo-img {
+    @include sm {
+      max-width: 200px;
+    }
+  }
+  &__actions {
+    @include lg {
+      justify-content: space-between;
+      padding-bottom: 23px;
+    }
+  }
+  &__address {
+    @include lg {
+      display: none;
+    }
+  }
+  &__social {
+    @include lg {
+      display: none;
+    }
+  }
+}
+
+.navbar {
+  &__item--active {
+  border-bottom: 2px solid $color-white;
+  }
+
+  &__btn {
+    @include lg-min {
+      display: none;
+    }
+    @include md-min {
+      display: block;
+    }
+  }
+  &__list {
+    @include lg {
+      display: none;
+    }
+  }
+}
