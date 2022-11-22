@@ -2,52 +2,65 @@
 @use "../../../mixins" as *;
 
 .services {
-background: $gradient-supersoft;
-padding-top: 75px;
-position: relative;
+  position: relative;
 
-@include md {
-  padding-top: $gap-xl;
-}
+  padding-top: 75px;
 
-&:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  right: $gap-xl;
-  left: $gap-xl;
-  height: $gap;
-  border-radius: 0 0 12px 12px;
-  background-color: #e7e7f2;
+  background: $gradient-supersoft;
+
+  @include md {
+    padding-top: $gap-xl;
   }
 
-&:after {
-  content: "";
-  position: absolute;
-  right: $gap;
-  left: $gap;
-  height: $gap-sm;
-  border-radius: 0 0 12px 12px;
-  background-color: #cacadb;
+  &:before {
+    position: absolute;
+    top: 100%;
+    right: $gap-xl;
+    left: $gap-xl;
+
+    height: $gap;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: #e7e7f2;
+  }
+
+  &:after {
+    position: absolute;
+    right: $gap;
+    left: $gap;
+
+    height: $gap-sm;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: #cacadb;
   }
 
   &__heading {
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: $color-white;
+
     opacity: 0.5;
+    color: $color-white;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
 
     &:after {
       position: absolute;
       top: 83px;
       bottom: 0;
-      padding-right: $gap-sm;
-      margin-left: 5px;
+
       max-height: 13px;
+      margin-left: 5px;
+      padding-right: $gap-sm;
+
       content: "";
+
       background-image: url(../img/arrow-right-gray.svg);
       background-repeat: no-repeat;
 
@@ -58,26 +71,30 @@ position: relative;
   }
 
   &__title {
-    font-size: 42px;
-    line-height: 50px;
-    background: $gradient-redtext;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     padding-bottom: 67px;
 
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    font-size: 42px;
+    line-height: 50px;
+
     @include md {
+      padding-bottom: $gap;
+
       font-size: 32px;
       line-height: 38px;
-      padding-bottom: $gap;
     }
+    -webkit-text-fill-color: transparent;
   }
 
   &__grid {
     display: grid;
-    gap: $gap-xl;
+
     padding-bottom: 80px;
 
+    gap: $gap-xl;
     @include xl-min {
       grid-template-columns: repeat(3,1fr);
     }
@@ -94,9 +111,10 @@ position: relative;
     flex-direction: column;
 
     @include md {
+      align-items: center;
+
       grid-template-areas: "img nam" "des des";
       grid-template-columns: auto 1fr;
-      align-items: center;
     }
   }
 
@@ -113,32 +131,40 @@ position: relative;
   }
 
   &__name {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 500;
-    color: $color-active-regular;
     padding-top: 14px;
 
+    color: $color-active-regular;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+
     @include md {
-      font-size: 18px;
-      line-height: 21px;
-      grid-area: nam;
       padding-top: 0;
       padding-left: $gap-sm;
+
+      font-size: 18px;
+      line-height: 21px;
+
+      grid-area: nam;
     }
   }
 
   &__description {
-    font-size: 18px;
-    line-height: 26px;
-    color: $color-white;
     padding-top: 16px;
 
+    color: $color-white;
+
+    font-size: 18px;
+    line-height: 26px;
+
     @include md {
+      padding-top: 6px;
+
       font-size: 16px;
       line-height: 22px;
+
       grid-area: des;
-      padding-top: 6px;
     }
   }
 }

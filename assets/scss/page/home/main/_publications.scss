@@ -2,9 +2,11 @@
 @use "../../../mixins" as *;
 
 .publications {
-  background-color: $color-bg;
-  padding-top: 35px;
   position: relative;
+
+  padding-top: 35px;
+
+  background-color: $color-bg;
 
   @include md {
     padding-top: $gap-md;
@@ -12,57 +14,66 @@
 
   &:after {
     @include md-min {
-    position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 60%;
-    background: linear-gradient(180deg, #f5f5fa00 0%, #F5F5FA 86.5%);
+      position: absolute;
+      top: 60%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      content: "";
+
+      background: linear-gradient(180deg, #f5f5fa00 0%, #f5f5fa 86.5%);
     }
   }
 
   &__heading {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-active-regular;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
 
     &:after {
       position: relative;
       top: 2px;
-      padding-right: $gap-sm;
+
       margin-left: 5px;
+      padding-right: $gap-sm;
+
       content: "";
+
       background-image: url(../img/arrow-right-blue.svg);
       background-repeat: no-repeat;
     }
   }
 
   &__title {
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 50px;
+    padding-top: 2px;
+
     background: $gradient-redtext;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    padding-top: 2px;
+            background-clip: text;
+
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
 
     @include md {
       font-size: 32px;
       line-height: 38px;
     }
+    -webkit-text-fill-color: transparent;
   }
 
   &__content {
+    padding-top: $gap-xl;
+
     column-count: auto;
     column-gap: $gap-xl;
     column-width: 413px;
-    padding-top: $gap-xl;
-
     @include md {
       padding-top: $gap;
       padding-bottom: 110px;
@@ -70,11 +81,13 @@
   }
 
   &__item {
-    background-color: $color-white;
-    border-radius: 8px;
-    margin-bottom: $gap-xl;
     display: flex;
     flex-direction: column;
+
+    margin-bottom: $gap-xl;
+
+    border-radius: 8px;
+    background-color: $color-white;
 
     @include md {
       margin-bottom: $gap;
@@ -94,31 +107,38 @@
   }
 
   &__name {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    color: $color-active-regular;
     padding: $gap $gap 0 $gap;
+
+    color: $color-active-regular;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
   }
 
   &__date {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    padding: $gap-sm $gap 18px $gap;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-text;
-    padding: $gap-sm $gap 18px $gap;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
   }
 
   &__description {
-    border-top: 4px solid $color-separator;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    margin-left: $gap;
     margin-right: $gap;
+    margin-left: $gap;
     padding: 18px 0 $gap-lg 0;
+
+    border-top: 4px solid $color-separator;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
 
     @include xl {
       display: none;
@@ -126,30 +146,35 @@
   }
 
   &__image {
-    border-radius: 8px 8px 0 0;
     width: 100%;
+
+    border-radius: 8px 8px 0 0;
   }
 
   &__button {
-    color: $color-white;
-    background: $color-active-regular;
-    box-shadow: 0px 0px $gap #24a3ff80;
-    border-radius: 12px;
-    cursor: pointer;
-    border: none;
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    bottom: $gap-xl;
+    left: 50%;
+
     min-width: 250px;
     min-height: 50px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    position: absolute;
+
+    cursor: pointer;
     transition: 0.3s;
-    z-index: 1;
-    left: 50%;
-    right: 50%;
     transform: translateX(-50%);
-    bottom: $gap-xl;
+    text-align: center;
+
+    color: $color-white;
+    border: none;
+    border-radius: 12px;
+    background: $color-active-regular;
+    box-shadow: 0 0 $gap #24a3ff80;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
 
     &:hover {
       background: $color-active-hover;

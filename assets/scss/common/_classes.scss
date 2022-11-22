@@ -3,19 +3,21 @@
 
 .container {
   width: min(100% - 40px, 1320px);
+
   margin-inline: auto;
 }
 
 .visually-hidden {
-  @include visually-hidden
+  @include visually-hidden;
 }
 
 .indicator {
   width: 16px;
   height: 16px;
+
+  opacity: 0.2;
   border-radius: 8px;
   background-color: $color-active-regular;
-  opacity: 0.2;
 }
 .indicator--active {
   opacity: 1;

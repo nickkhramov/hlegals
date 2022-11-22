@@ -11,33 +11,38 @@
   &__top {
     display: flex;
     align-items: center;
-    gap: 48px;
 
+    gap: 48px;
     @include md {
       flex-direction: column;
+
       gap: $gap-sm;
     }
   }
 
   &__address {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
     color: $color-main;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
   }
 
   &__link {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-active-regular;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
   }
 
   &__bottom {
     display: flex;
     align-items: center;
+
     padding-top: $gap;
 
     @include md {
@@ -49,16 +54,18 @@
     transition: 0.5s;
 
     &:hover {
+      cursor: pointer;
+
       fill: $color-accent;
-      cursor: pointer
     }
   }
 
   &__phone {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
     color: $color-main-alt;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
 
     @include md-min {
       padding-left: $gap;
@@ -69,10 +76,11 @@
   }
 
   &__mail {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
     color: $color-active-regular;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
 
     @include md-min {
       padding-left: $gap-lg;
@@ -89,11 +97,13 @@
   }
 
   &__copyright-text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: $color-text;
     text-align: right;
+
+    color: $color-text;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
 
     @include md {
       text-align: center;
@@ -101,14 +111,17 @@
   }
 }
 .container--footer {
-  border-top: 4px solid $color-separator;
   display: flex;
   justify-content: space-between;
+
   padding-top: $gap-lg;
   padding-bottom: $gap-xl;
 
+  border-top: 4px solid $color-separator;
+
   @include md {
     flex-direction: column;
+
     padding-top: $gap;
     padding-bottom: 115px;
   }

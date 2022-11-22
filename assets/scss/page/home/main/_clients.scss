@@ -2,21 +2,23 @@
 @use "../../../mixins" as *;
 
 .clients {
-
   &__title {
-    font-size: 14px;
-    line-height: 17px;
+    padding-bottom: $gap-lg;
+
+    text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-main;
-    text-align: center;
-    padding-bottom: $gap-lg;
+
+    font-size: 14px;
+    line-height: 17px;
   }
 
   &__wrap {
     display: grid;
-    grid-template-areas: "hil wan tap loo" "ora adt cli eco" "inf cit art uca";
 
+    grid-template-areas: "hil wan tap loo" "ora adt cli eco" "inf cit art uca";
     @include lg {
       grid-template-areas: "hil wan tap" "loo eco adt" "cli ora cit" "inf art uca";
     }
@@ -26,10 +28,11 @@
   }
 
   &__item {
-    min-height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    min-height: 120px;
 
     @include md {
       min-height: 90px;
@@ -44,61 +47,73 @@
 
   &__hillel {
     background-color: #1c4280;
+
     grid-area: hil;
   }
 
   &__wannabiz {
     background-color: #143646;
+
     grid-area: wan;
   }
 
   &__tapgerine {
     background-color: #f48b30;
+
     grid-area: tap;
   }
 
   &__3dlook {
     background-color: #9e4dc3;
+
     grid-area: loo;
   }
 
   &__orangear {
     background-color: #fd9339;
+
     grid-area: ora;
   }
 
   &__adtelligent {
     background-color: #e2e2e4;
+
     grid-area: adt;
   }
 
   &__clickky {
     background-color: #c71c36;
+
     grid-area: cli;
   }
 
   &__ecolease {
     background-color: #dcf3f9;
+
     grid-area: eco;
   }
 
   &__infratek {
     background-color: #eaeaea;
+
     grid-area: inf;
   }
 
   &__citypark {
     background-color: #282240;
+
     grid-area: cit;
   }
 
   &__artprint {
     background-color: #1d4568;
+
     grid-area: art;
   }
 
   &__ucard {
     background-color: $color-black;
+
     grid-area: uca;
   }
 }

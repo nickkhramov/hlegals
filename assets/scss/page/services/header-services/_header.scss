@@ -7,15 +7,18 @@
     background-color: $color-main;
 
     &::after {
-      content: "";
-      background: none;
       top: 100%;
+
+      content: "";
+
+      background: none;
     }
   }
   &__top {
     @include lg {
-      grid-template-areas: "act act" "log nav";
       padding-top: $gap;
+
+      grid-template-areas: "act act" "log nav";
     }
   }
   &__logo-img {
@@ -26,6 +29,7 @@
   &__actions {
     @include lg {
       justify-content: space-between;
+
       padding-bottom: 23px;
     }
   }
@@ -43,7 +47,7 @@
 
 .navbar {
   &__item--active {
-  border-bottom: 2px solid $color-white;
+    border-bottom: 2px solid $color-white;
   }
 
   &__btn {

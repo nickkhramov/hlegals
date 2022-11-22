@@ -14,17 +14,19 @@ html {
 }
 
 body {
-  font-size: 21px;
   font-family: $font-primary;
+  font-size: 21px;
   font-weight: normal;
 }
 
 a {
-  text-decoration: none;
-  color: $color-white;
   transition: 0.5s;
+  text-decoration: none;
+
+  color: $color-white;
 }
 a:hover {
-  color: $color-accent;
   cursor: pointer;
+
+  color: $color-accent;
 }
