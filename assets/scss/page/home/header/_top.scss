@@ -47,15 +47,6 @@
     }
   }
 
-  &__language {
-  }
-
-  &__address {
-    }
-
-  &__phones {
-  }
-
   &__phone-link {
     font-weight: 700;
     font-size: 16px;
@@ -65,9 +56,6 @@
     @include md {
       color: $color-text;
     }
-  }
-
-  &__social {
   }
 }
 
@@ -138,9 +126,6 @@
     @include md {
       display: none;
     }
-  }
-
-  &__item {
   }
 
   &__link {

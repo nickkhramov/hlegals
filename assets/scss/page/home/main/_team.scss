@@ -85,9 +85,6 @@
     border-radius: 120px;
   }
 
-  &__naming {
-  }
-
   &__name {
     font-weight: 500;
     font-size: 18px;
@@ -112,9 +109,6 @@
     gap: $gap-md;
     justify-content: center;
     padding-top: $gap;
-  }
-
-  &__indicator {
   }
 }
 .container--team {
