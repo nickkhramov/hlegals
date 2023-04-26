@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
 
-    min-height: 100vh;
+    min-height: 650px;
 
     @include md-min {
       background-image: url(../img/splash.svg);
